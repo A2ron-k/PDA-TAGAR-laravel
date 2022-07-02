@@ -1,4 +1,5 @@
 <?php
+
 namespace App;
 
 use App\Http\Controllers\CasesController;
@@ -19,6 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/login', function(){
+    return view('login');
+});
+
 //  Auto Routing for all resource specific views
-Route::resource('cases',CasesController::class);
-Route::get("/cases/{case_id}",[CasesController::class,'show']);
+Route::resource('cases', CasesController::class);
+Route::get("/cases/{case_id}", [CasesController::class, 'show']);

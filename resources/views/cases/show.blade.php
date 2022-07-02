@@ -5,6 +5,14 @@
 
 {{-- ################################################# --}}
 
+@php
+// subjected to removal 
+    // $tagging_processed = $case['tagging_results'];
+
+
+@endphp
+
+
 @section('content')
     {{-- This area is for the content --}}
 
@@ -12,6 +20,10 @@
                 <h3>{{ $case['case_id'] }}</h3>
                 <ul>
                     <li>
+                        {{ $case['location'] }}
+                        {{ $case['location'] /* Age */ }} 
+                        
+                        {{ $case['location'] /* Age */  }}
                         {{ $case['location'] }}
                     </li>
                 </ul>

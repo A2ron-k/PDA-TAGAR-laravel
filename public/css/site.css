@@ -5,10 +5,10 @@ body {
 #sidebar-wrapper {
     min-height: 100vh;
     margin-left: -15rem;
-    -webkit-transition: margin .25s ease-out;
-    -moz-transition: margin .25s ease-out;
-    -o-transition: margin .25s ease-out;
-    transition: margin .25s ease-out;
+    -webkit-transition: margin 0.25s ease-out;
+    -moz-transition: margin 0.25s ease-out;
+    -o-transition: margin 0.25s ease-out;
+    transition: margin 0.25s ease-out;
 }
 
 #sidebar-wrapper .sidebar-heading {
@@ -41,4 +41,39 @@ body {
     #wrapper.toggled #sidebar-wrapper {
         margin-left: -15rem;
     }
+}
+
+#img-user-login {
+    position: absolute;
+    height: 244.5px;
+    width: 244.5px;
+    left: 294px;
+    top: 255px;
+}
+
+#input-username-login {
+    /* input-username */
+    position: absolute;
+    width: 244px;
+    height: 53px;
+    left: 294.25px;
+    top: 553.25px;
+}
+
+#input-password-login {
+    /* input-password */
+    position: absolute;
+    width: 244px;
+    height: 53px;
+    left: 294.25px;
+    top: 622.25px;
+}
+
+#submit-login {
+    /* btn-signin */
+    position: absolute;
+    width: 171px;
+    height: 51px;
+    left: 331.25px;
+    top: 706.25px;
 }

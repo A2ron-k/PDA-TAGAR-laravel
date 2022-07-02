@@ -59,6 +59,7 @@
                 <main class="py-4">
                     @yield('content')
                 </main>
+                    @yield('sub-content')
 
                 @yield('script')
             </div>
