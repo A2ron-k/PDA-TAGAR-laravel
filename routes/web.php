@@ -24,6 +24,10 @@ Route::get('/login', function(){
     return view('login');
 });
 
+Route::get('/predicted', function(){
+    return view('predicted');
+});
+
 //  Auto Routing for all resource specific views
 Route::resource('cases', CasesController::class);
 Route::get("/cases/{case_id}", [CasesController::class, 'show']);

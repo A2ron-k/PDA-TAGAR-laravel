@@ -2,46 +2,6 @@ body {
     overflow-x: hidden;
 }
 
-#sidebar-wrapper {
-    min-height: 100vh;
-    margin-left: -15rem;
-    -webkit-transition: margin 0.25s ease-out;
-    -moz-transition: margin 0.25s ease-out;
-    -o-transition: margin 0.25s ease-out;
-    transition: margin 0.25s ease-out;
-}
-
-#sidebar-wrapper .sidebar-heading {
-    padding: 0.875rem 1.25rem;
-    font-size: 1.2rem;
-}
-
-#sidebar-wrapper .list-group {
-    width: 15rem;
-}
-
-#page-content-wrapper {
-    min-width: 100vw;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-    margin-left: 0;
-}
-
-@media (min-width: 768px) {
-    #sidebar-wrapper {
-        margin-left: 0;
-    }
-
-    #page-content-wrapper {
-        min-width: 0;
-        width: 100%;
-    }
-
-    #wrapper.toggled #sidebar-wrapper {
-        margin-left: -15rem;
-    }
-}
 
 #img-user-login {
     position: absolute;
@@ -72,8 +32,50 @@ body {
 #submit-login {
     /* btn-signin */
     position: absolute;
-    width: 171px;
     height: 51px;
+    width: 171px;
     left: 331.25px;
     top: 706.25px;
+    border-radius: 14px;
 }
+
+#predicted-container-case {
+    /* container-case */
+    position: absolute;
+    width: 654px;
+    height: 132px;
+    left: 92px;
+    top: 108px;
+    margin-bottom: 24px;
+    border:1px solid black;
+    border-radius: 4px;
+    box-shadow: 3px 7px;
+    
+}
+
+#predicted-header{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 38px;
+    color: brown;
+}
+
+#predicted-symptoms{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28.13px;
+}
+
+#predicted-cause{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28.13px;
+
+}
+
