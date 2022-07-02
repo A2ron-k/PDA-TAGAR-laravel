@@ -1,5 +1,7 @@
 <?php
+namespace App;
 
+use App\Http\Controllers\CasesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//  Auto Routing for all resource specific views
+Route::resource('cases',CasesController::class);
+Route::get("/cases/{case_id}",[CasesController::class,'show']);
