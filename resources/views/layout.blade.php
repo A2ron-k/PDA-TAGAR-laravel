@@ -35,7 +35,7 @@
                     <img src="https://cdn-icons-png.flaticon.com/512/7926/7926414.png"
                         width="48px"alt=""> Current Case</a>                 
                 <br>
-                <a href="#" class="sidebar-heading">
+                <a href="{{route("cases.index")}}" class="sidebar-heading">
                     <img src="https://cdn-icons-png.flaticon.com/512/2927/2927067.png"
                         width="48px"alt=""> Case History</a>
                 <br>
