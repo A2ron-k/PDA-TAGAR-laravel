@@ -31,11 +31,18 @@
 
             <div class="list-group list-group-flush">
 
-                <a href="#" class="list-group-item list-group-item-action bg-light">
-                    <img src="https://img.freepik.com/free-vector/cow-farm-logo_42174-13.jpg?w=2000"
-                        width="50px"alt=""> Current Case</a>
-                <a href="{{ route('cases.index')}}" class="list-group-item list-group-item-action bg-light">Case History</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Simulation</a>
+                <a href="#" class="sidebar-heading">
+                    <img src="https://cdn-icons-png.flaticon.com/512/7926/7926414.png"
+                        width="48px"alt=""> Current Case</a>                 
+                <br>
+                <a href="#" class="sidebar-heading">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2927/2927067.png"
+                        width="48px"alt=""> Case History</a>
+                <br>
+                <a href="#" class="sidebar-heading">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4696/4696488.png"
+                        width="48px"alt=""> Simulation</a>
+
                 {{-- <a href="{{ route('case.index') }}" class="list-group-item list-group-item-action bg-light">OMNI</a> --}}
             </div>
         </div>
