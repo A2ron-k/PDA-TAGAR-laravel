@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 class CasesController extends Controller
 {
 
+/**
+ * It returns an array of arrays
+ * 
+ * @return An array of arrays.
+ */
     public static function getData(){
         return [
             ['case_id' => "ID100000", 'ic_number'=> "S1234567A", 'location' => "80 Bukit Panjang Road", 'postal_code' => "123456", 
@@ -67,11 +72,7 @@ class CasesController extends Controller
     {
         $cases_arr = self::getData();
 
-        $index = array_search($case,array_column($cases_arr,'id'));
-
-        // if ($index === false){
-        //     abort(404);
-        // }
+        $index = array_search($case,array_column($cases_arr,'case_id'));
 
         return view ('cases.show',[
             'case' => $cases_arr[$index]
