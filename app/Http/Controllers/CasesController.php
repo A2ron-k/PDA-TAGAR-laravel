@@ -3,24 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\CurrentCase;
 
 class CasesController extends Controller
 {
-    public static function getData(){
-        return [
-            ['case_id' => "ID100000", 'ic_number'=> "S1234567A", 'location' => "80 Bukit Panjang Road", 'postal_code' => "123456", 
-            'unit_number' => '#13-24', 'chief_complain' => "motorcycle accident", 'tagging_reults' => "burn, trauma, poisioning",
-            'prediction_diagnosis' => "sepsis, heart attack, anaphalxysis", 'prediction_diagnosis_percentage' => "0.92,0.84,0.73"],
+    // public static function getData(){
+    //     return [
+    //         ['case_id' => "ID100000", 'ic_number'=> "S1234567A", 'location' => "80 Bukit Panjang Road", 'postal_code' => "123456", 
+    //         'unit_number' => '#13-24', 'chief_complain' => "motorcycle accident", 'tagging_reults' => "burn, trauma, poisioning",
+    //         'prediction_diagnosis' => "sepsis, heart attack, anaphalxysis", 'prediction_diagnosis_percentage' => "0.92,0.84,0.73"],
 
-            ['case_id' => "ID100001", 'ic_number'=> "S1234567A", 'location' => "70 Bukit Panjang Road", 'postal_code' => "123456", 
-            'unit_number' => '#13-24', 'chief_complain' => "motorcycle accident", 'tagging_reults' => "burn, trauma, poisioning",
-            'prediction_diagnosis' => "sepsis, heart attack, anaphalxysis", 'prediction_diagnosis_percentage' => "0.92,0.84,0.73"],
+    //         ['case_id' => "ID100001", 'ic_number'=> "S1234567A", 'location' => "70 Bukit Panjang Road", 'postal_code' => "123456", 
+    //         'unit_number' => '#13-24', 'chief_complain' => "motorcycle accident", 'tagging_reults' => "burn, trauma, poisioning",
+    //         'prediction_diagnosis' => "sepsis, heart attack, anaphalxysis", 'prediction_diagnosis_percentage' => "0.92,0.84,0.73"],
 
-            ['case_id' => "ID100002", 'ic_number'=> "S1234567A", 'location' => "60 Bukit Panjang Road", 'postal_code' => "123456", 
-            'unit_number' => '#13-24', 'chief_complain' => "motorcycle accident", 'tagging_reults' => "burn, trauma, poisioning",
-            'prediction_diagnosis' => "sepsis, heart attack, anaphalxysis", 'prediction_diagnosis_percentage' => "0.92,0.84,0.73"]
-        ];
-    }
+    //         ['case_id' => "ID100002", 'ic_number'=> "S1234567A", 'location' => "60 Bukit Panjang Road", 'postal_code' => "123456", 
+    //         'unit_number' => '#13-24', 'chief_complain' => "motorcycle accident", 'tagging_reults' => "burn, trauma, poisioning",
+    //         'prediction_diagnosis' => "sepsis, heart attack, anaphalxysis", 'prediction_diagnosis_percentage' => "0.92,0.84,0.73"]
+    //     ];
+    // }
+
+    
 
     /**
      * Display a listing of the resource.
@@ -30,9 +33,8 @@ class CasesController extends Controller
     public function index()
     {
         
-
-    
-        return view('cases.index', ["cases" =>self::getData()]);
+        return view('cases.index', 
+                        ["cases" => CurrentCase::all()]);
     }
 
     /**
