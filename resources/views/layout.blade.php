@@ -38,7 +38,7 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/cases/1">Current Case</a></li>
                     <li><a href="{{route("cases.index")}}">Case History</a></li>
-                    <li><a href="#">Simulation</a></li>
+                    <li><a href="/sim">Simulation</a></li>
                     <li><a href="#">OMNII</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

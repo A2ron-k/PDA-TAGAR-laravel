@@ -266,4 +266,44 @@ body {
     opacity: 0.6;
 }
 
+#past-medical-history {
+    position: absolute;
+    width: 228px;
+    height: 30px;
+    left: 19px;
+    top: 658px;
 
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+
+    color: #4c5175;
+}
+
+#history-desc {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 786px;
+    height: 297px;
+    left: calc(50% - 786px / 2 - 7px);
+    top: calc(50% - 297px / 2 + 251.5px);
+
+    background: #ffffff;
+    border: 2px solid #33363f;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+}
+
+#btn-RSE {
+    position: absolute;
+    width: 246px;
+    height: 68px;
+    left: 291px;
+    top: 1021px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}

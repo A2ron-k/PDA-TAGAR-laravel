@@ -14,9 +14,9 @@
         <span id='info-caseid'>Case ID: 01234567</span>
         <span id='info-chiefComplain'>Motor Accident</span>
         <div id="info-patientInfo">
-            Name: John Tan
-            Age: 65
-            Allegy: Nut, Wheat, Soy
+            <div>Name: John Tan</div>
+            <div>Age: 65</div>
+            <div>Allegy: Nut, Wheat, Soy</div>
         </div>
     </div>
 
@@ -34,8 +34,8 @@
     </div>
 
     <div>
-        <div >Past Medical History</div>
-        <div>
+        <div id= 'past-medical-history'>Past Medical History</div>
+        <div id= 'history-desc'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet pellentesque dui. Curabitur convallis
             lacus sit amet sem gravida dapibus. Quisque tempor nulla erat, nec egestas tellus sodales ac. Sed suscipit velit
             ex, id commodo turpis varius eget. Donec a tempus velit. Donec vitae ligula sodales, ornare diam quis, maximus
@@ -44,13 +44,8 @@
     </div>
 
     <div>
-        <button onclick="location.href = '/geolocation'" id="">Sign In</button>
+        <button id='btn-RSE' onclick="location.href = '/geolocation'" id="">Location</button>
     </div>
-
-
-
-
-
 
 
 @endsection
