@@ -93,3 +93,15 @@ body {
 
     opacity: 0.6;
 }
+
+#geolocation-container-case {
+    
+    position: absolute;
+    width: 786px;
+    height: 488px;
+    left: 24px;
+    top: 93px;
+
+    background: #d9d9d9;
+    border-radius: 4px;
+}

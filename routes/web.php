@@ -32,6 +32,10 @@ Route::get('/case_specific', function(){
     return view('case_specific');
 });
 
+Route::get('/geolocation', function(){
+    return view('geolocation');
+});
+
 //  Auto Routing for all resource specific views
 Route::resource('cases', CasesController::class);
 Route::get("/cases/{case_id}", [CasesController::class, 'show']);
