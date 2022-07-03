@@ -36,6 +36,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
+                    <li><img src="https://www.scdf.gov.sg/Cwp/assets/images/SCDF_The_Life_Saving_Force_Logo_New.png" id='logo-png' alt=""></li>
                     <li class="active"><a href="/cases/1">Current Case</a></li>
                     <li><a href="{{route("cases.index")}}">Case History</a></li>
                     <li><a href="/sim">Simulation</a></li>
