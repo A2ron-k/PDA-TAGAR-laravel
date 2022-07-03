@@ -20,11 +20,29 @@
                 <h3>{{ $case['case_id'] }}</h3>
                 <ul>
                     <li>
-                        {{ $case['location'] }}
-                        {{ $case['location'] /* Age */ }} 
-                        
-                        {{ $case['location'] /* Age */  }}
-                        {{ $case['location'] }}
+                        <div>
+                        {{ $case['name']}}
+                        </div>
+
+                        <div>
+                        {{ $case['age']}}
+                        </div>
+
+                        <div>
+                        {{ $case['location']}}
+                        </div>
+
+                        <div>
+                        {{ $case['allergies']}}
+                        </div>
+
+                        <div>
+                        {{ $case['chief_complain']}}
+                        </div>
+
+                        <div>
+                        {{ $case['medical_history']}}
+                        </div>
                     </li>
                 </ul>
         </div>

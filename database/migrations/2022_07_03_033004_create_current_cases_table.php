@@ -17,6 +17,7 @@ class CreateCurrentCasesTable extends Migration
             $table->string('id');
             $table->string('case_id');
             $table->string('ic_number');
+            $table->string('name');
             $table->string('age');
             $table->string('allergies');
             $table->string('location');
@@ -32,6 +33,7 @@ class CreateCurrentCasesTable extends Migration
             $table->string('prediction_diagnosis_percentage_2');
             $table->string('prediction_diagnosis_3');
             $table->string('prediction_diagnosis_percentage_3');
+            $table->string('medical_history');
         });
     }
 
