@@ -9,7 +9,7 @@
 {{-- This area is for the content --}}
 
 <div>
-    <img src="https://cdn-icons-png.flaticon.com/512/848/848043.png" id="img-user-login">
+    <img src="{{url('img/vector-user.png')}}" id="img-user-login">
     <input type="text" id="input-username-login" placeholder="Username">
     <input type="password" id="input-password-login" placeholder="Password">
 
