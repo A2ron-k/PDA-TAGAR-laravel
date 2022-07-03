@@ -12,7 +12,7 @@
         <div>
             @foreach ($cases as $case)
                 <h3>
-                    <a href="{{ route('cases.show', ['case'=> $case['case_id']]) }}">{{ $case['case_id'] }}</a>
+                    <a href="{{ route('cases.show', ['case'=> $case['id']]) }}">{{ $case['case_id'] }}</a>
                     
                     </h3>
                 <ul>

@@ -14,6 +14,7 @@ class CreateCurrentCasesTable extends Migration
     public function up()
     {
         Schema::create('current_cases', function (Blueprint $table) {
+            $table->string('id');
             $table->string('case_id');
             $table->string('ic_number');
             $table->string('age');

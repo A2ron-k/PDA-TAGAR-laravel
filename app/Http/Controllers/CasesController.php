@@ -23,8 +23,6 @@ class CasesController extends Controller
     //     ];
     // }
 
-    
-
     /**
      * Display a listing of the resource.
      *
@@ -66,12 +64,9 @@ class CasesController extends Controller
      */
     public function show($case)
     {
-        $cases_arr = self::getData();
-
-        $index = array_search($case,array_column($cases_arr,'case_id'));
 
         return view ('cases.show',[
-            'case' => $cases_arr[$index]
+            'case' => CurrentCase::findorFail($case)
         ]);
 
     }
