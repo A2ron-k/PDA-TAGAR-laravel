@@ -1,6 +1,6 @@
 {{-- ################################################# --}}
 @extends('layout')
-@section('title', 'Welcome')
+@section('title', 'Prediction')
 {{-- Do not touch layout --}}
 
 {{-- ################################################# --}}
