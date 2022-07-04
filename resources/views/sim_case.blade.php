@@ -5,48 +5,55 @@
 
 {{-- ################################################# --}}
 
-@section('sub-content')
+@php
+$case = ['case_id' => 'SIM MODE', 'chief_complain' => 'Motor Accident', 'name' => 'John Tan', 'age' => '65', 'allergies' => 'Nut, Wheat, Soy', 'tagging_result_1' => 'Internal Pain in Chest', 'tagging_result_2' => 'Blood from Head', 'tagging_result_3' => 'Blisters on Leg', 'medical_history' => 'Patient is Asthmathic, Diabetic and has High Blood Pressure.'];
+@endphp
+
+
+@section('content')
     {{-- This area is for the content --}}
 
     <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/848/848043.png" height=179px width=179px left=86px top=136px
-            id='img-patient' alt="">
-        <span id='info-caseid'>Case ID: 01234567</span>
-        <span id='info-chiefComplain'>Motor Accident</span>
+        <img src="{{ url('img/vector-user.png') }}" height=179px width=179px left=86px top=136px id='img-patient'
+            alt="">
+        <span id='info-caseID'>Case ID: {{ $case['case_id'] }}</span>
+        <span id='info-chiefComplain'>{{ $case['chief_complain'] }}</span>
         <div id="info-patientInfo">
-            <div>Name: John Tan</div>
-            <div>Age: 65</div>
-            <div>Allegy: Nut, Wheat, Soy</div>
+            {{ $case['name'] }} | {{ $case['age'] }}
+            <br>
+            Allegy: {{ $case['allergies'] }}
         </div>
     </div>
 
     <div>
-        <div id="info-header">Diagnosis</div>
-        <span id="result-ML-one">
-            <div id="info-result">Internal Pain in Chest</div>
+        <div id="info-sympHeaderOne">Diagnosis</div>
+        <div id="result-ML" style="left: 24px;">
+            <div id="info-symp">{{ $case['tagging_result_1'] }}</div>
+        </div>
+        <span id="result-ML" style="left: 289px;">
+            <div id="info-symp">{{ $case['tagging_result_2'] }}</div>
         </span>
-        <span id="result-ML-two">
-            <div id="info-result" >Blood from Head</div>
-        </span>
-        <span id="result-ML-three">
-            <div id="info-result">Blisters on Leg</div>
+        <span id="result-ML" style="left: 555px;">
+            <div id="info-symp">{{ $case['tagging_result_3'] }}</div>
         </span>
     </div>
 
     <div>
-        <div id= 'past-medical-history'>Past Medical History</div>
-        <div id= 'history-desc'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet pellentesque dui. Curabitur convallis
-            lacus sit amet sem gravida dapibus. Quisque tempor nulla erat, nec egestas tellus sodales ac. Sed suscipit velit
-            ex, id commodo turpis varius eget. Donec a tempus velit. Donec vitae ligula sodales, ornare diam quis, maximus
-            lectus.
+        <a href="#" id='hf-deepdive'>View more</a>
+    </div>
+
+    <div>
+        <div id='past-medical-history'>Past Medical History</div>
+        <div id='history-desc-bg'>
+            <span id='info-pastPatientInfo'>
+                {{ $case['medical_history'] }}
+            </span>
         </div>
     </div>
 
     <div>
-        <button id='btn-RSE' onclick="location.href = '/geolocation'" id="">Location</button>
+        <button id='btn-locate' onclick="location.href = '/geolocation'" id="">Location</button>
     </div>
-
 
 @endsection
 

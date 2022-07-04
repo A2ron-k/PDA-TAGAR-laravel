@@ -8,18 +8,17 @@
 @section('content')
     {{-- This area is for the content --}}
 
+    <div id="info-sympHeader" style="top: 224px;">
+        Case History
+    </div>
+
     @if (count($cases) > 0)
-        <div>
+        <div id="cases-index-container">
             @foreach ($cases as $case)
-                <h3>
-                    <a href="{{ route('cases.show', ['case'=> $case['id']]) }}">{{ $case['case_id'] }}</a>
-                    
-                    </h3>
-                <ul>
-                    <li>
-                        {{ $case['location'] }}
-                    </li>
-                </ul>
+                <div id='info-caseHis'>
+                    <a id='info-header' href="{{ route('cases.show', ['case' => $case['id']]) }}">{{ $case['case_id'] }} -
+                        {{ $case['location'] }} - Time</a>
+                </div><br><br><br><br><br>
             @endforeach
         </div>
     @else
