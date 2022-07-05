@@ -24,12 +24,16 @@ Route::get('/login', function(){
     return view('login');
 });
 
-Route::get('/predicted', function(){
-    return view('predicted');
+Route::get('/signup', function(){
+    return view('signup');
 });
 
-Route::get('/case_specific', function(){
-    return view('case_specific');
+Route::get('/diagnosis', function(){
+    return view('diagnosis');
+});
+
+Route::get('/jit', function(){
+    return view('jit');
 });
 
 Route::get('/geolocation', function(){
