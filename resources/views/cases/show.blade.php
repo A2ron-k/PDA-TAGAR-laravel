@@ -10,10 +10,11 @@
 @section('content')
     {{-- This area is for the content --}}
 
-    <div>
+    <div id='info-sympHeader'>{{ $case['case_id'] }}</div>
+
+    <div id="patient-profile">
         <img src="{{ url('img/vector-user.png') }}" height=179px width=179px left=86px top=136px id='img-patient'
             alt="">
-        <span id='info-caseID'>Case ID: {{ $case['case_id'] }}</span>
         <span id='info-chiefComplain'>{{ $case['chief_complain'] }}</span>
         <div id="info-patientInfo">
             {{ $case['name'] }} | {{ $case['age'] }}
@@ -23,23 +24,20 @@
     </div>
 
     <div>
-        <div id="info-sympHeaderOne">Diagnosis</div>
-        <div id="result-ML" style="left: 24px;">
-            <div id="info-symp"  style="top: 24px;" >{{ $case['tagging_result_1'] }}</div>
+        <div id="info-sympHeader" style="top:373px">Symptoms</div>
+        <div id="result-ML" style="left: 66px;">
+            <div id="info-symp">{{ $case['tagging_result_1'] }}</div>
         </div>
-        <span id="result-ML" style="left: 289px;">
-            <div id="info-symp"style="top: 24px;">{{ $case['tagging_result_2'] }}</div>
+
+        <span id="result-ML" style="left: 311px;">
+            <div id="info-symp">{{ $case['tagging_result_2'] }}</div>
         </span>
         <span id="result-ML" style="left: 555px;">
-            <div id="info-symp"style="top: 24px;">{{ $case['tagging_result_3'] }}</div>
+            <div id="info-symp">{{ $case['tagging_result_3'] }}</div>
         </span>
     </div>
 
-    <div>
-        <a href="../predicted" id='hf-deepdive'>View more</a>
-    </div>
-
-    <div>
+    <div id="med-history-container">
         <div id='past-medical-history'>Past Medical History</div>
         <div id='history-desc-bg'>
             <span id='info-pastPatientInfo'>
@@ -49,7 +47,11 @@
     </div>
 
     <div>
-        <button id='btn-locate' onclick="location.href = '/geolocation'" id="">Location</button>
+        <button id='btn-diagnose' onclick="location.href = '../diagnosis'" id="">Diagnose</button>
+    </div>
+
+    <div>
+        <button id='btn-locate' onclick="location.href = '/geolocation'" id="">Locate Patient</button>
     </div>
 
 @endsection

@@ -8,7 +8,7 @@
 @section('content')
     {{-- This area is for the content --}}
 
-    <div id="info-sympHeader" style="top: 224px;">
+    <div id="info-sympHeader">
         Case History
     </div>
 
@@ -17,7 +17,9 @@
             @foreach ($cases as $case)
                 <div id='info-caseHis'>
                     <a id='info-header' href="{{ route('cases.show', ['case' => $case['id']]) }}">{{ $case['case_id'] }} -
-                        {{ $case['location'] }} - Time</a>
+                        {{ $case['location'] }} - Time</a><br>
+                    <div id="info-date">Date</div>
+
                 </div><br><br><br><br><br>
             @endforeach
         </div>
