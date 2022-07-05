@@ -17,8 +17,8 @@
             @foreach ($cases as $case)
                 <div id='info-caseHis'>
                     <a id='info-header' href="{{ route('cases.show', ['case' => $case['id']]) }}">{{ $case['case_id'] }} -
-                        {{ $case['location'] }} - Time</a><br>
-                    <div id="info-date">Date</div>
+                        {{ $case['location'] }} - {{ $case['time']}}</a><br>
+                    <div id="info-date">{{ $case['date']}} </div>
 
                 </div><br><br><br><br><br>
             @endforeach
