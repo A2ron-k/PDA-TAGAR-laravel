@@ -76,6 +76,8 @@ class CreateCurrentCasesTable extends Migration
             // [
             //     'name' => 'Category3',
             // ],
+
+            
         );
         foreach ($data as $datum) {
             $category = new CurrentCase(); //The Category is the model for your migration
