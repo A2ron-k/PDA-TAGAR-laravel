@@ -19,7 +19,7 @@
         <div id="info-patientInfo">
             {{ $case['name'] }} | {{ $case['age'] }}
             <br>
-            Allegy: {{ $case['allergies'] }}
+            Allergy: {{ $case['allergies'] }}
         </div>
     </div>
 
