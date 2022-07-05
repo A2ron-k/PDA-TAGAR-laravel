@@ -1,43 +1,58 @@
 {{-- ################################################# --}}
 @extends('layout')
-@section('title', 'Prediction')
+@section('title', 'Diagnosis')
 {{-- Do not touch layout --}}
 
 {{-- ################################################# --}}
 
-@section('sub-content')
+@php
+
+$case_diagnosis = [
+    [
+        'Diagnosis' => 'Sprained Ankle',
+        'Percentage' => '92%',
+        'Symptoms' => 'Pain, Bruising, Swelling, Restricted ROM...',
+        'Causes' => 'Fall, Landing awkardly, Walking on uneven surface...',
+        'link' => '/jit',
+    ],
+    [
+        'Diagnosis' => 'Achilles Tendonities',
+        'Percentage' => '84%',
+        'Symptoms' => 'Swelling near heel, Inability to stand on toes...',
+        'Causes' => 'Over-exertion (jumping), Falling from height...',
+        'link' => '/jit',
+    ],
+    [
+        'Diagnosis' => 'Ankle Fracture (Broken Ankle)',
+        'Percentage' => '62%',
+        'Symptoms' => 'Immediate throbbing pain, Bruising, Deformity...',
+        'Causes' => 'Twisting, Rotating or rolling ankle, Impact or stress...',
+        'link' => '/jit',
+    ],
+    [
+        'Diagnosis' => 'Rhabdomyolysis',
+        'Percentage' => '30%',
+        'Symptoms' => 'Muscle swelling, Weak, Tender and Sore Muscle...',
+        'Causes' => ' High-intensity exercise, Severe Dehydration...',
+        'link' => '/jit',
+    ],
+];
+
+@endphp
+
+@section('content')
     {{-- This area is for the content --}}
-
-    <div id="predicted-container-case" style="top: 284px;">
-        <div id="predicted-header" style="top:20px">Sprained Ankle | 92%</div>
-        <div id="predicted-symptoms" style="top:64px">Symptoms: Pain, Bruising, Swelling, Restricted ROM...<br> Causes: Fall,
-            Landing awkardly, Walking on uneven surface...</div>
-        <a id='hf-revision' href="/case_specific">Revision Here</a>
+    <div id="cases-index-container">
+        @foreach ($case_diagnosis as $diagnosis)
+            <div id="diagnosis-container-case">
+                <div id="predicted-header">{{ $diagnosis['Diagnosis'] }} | {{ $diagnosis['Percentage'] }}
+                </div>
+                <div id="predicted-symptoms">Symptoms: {{ $diagnosis['Symptoms'] }}<br> Causes:
+                    {{ $diagnosis['Causes'] }}</div>
+                <a id='hf-revision' href="{{$diagnosis['link']}}">More Info</a>
+            </div><br><br><br><br><br><br><br>
+        @endforeach
     </div>
-
-    <div id="predicted-container-case" style="top: 440px;">
-        <div id="predicted-header" style="top:20px">Achilles Tendonities | 84%</div>
-        <div id="predicted-symptoms" style="top:64px">Symptoms: Swelling near heel, Inability to stand on toes...<br>
-            Causes: Over-exertion (jumping), Falling from height...</div>
-        <a id='hf-revision' href="/case_specific">Revision Here</a>
-    </div>
-
-    <div id="predicted-container-case" style="top: 596px;">
-        <div id="predicted-header" style="top:20px">Ankle Fracture (Broken Ankle) | 62%</div>
-        <div id="predicted-symptoms" style="top:64px">Symptoms: Immediate throbbing pain, Bruising, Deformity...<br> Causes:
-            Twisting, Rotating or rolling ankle, Impact or stress...</div>
-        <a id='hf-revision' href="/case_specific">Revision Here</a>
-    </div>
-
-    <div id="predicted-container-case" style="top: 752px;">
-        <div id="predicted-header" style="top:20px">Rhabdomyolysis | 30%</div>
-        <div id="predicted-symptoms" style="top:64px">Symptoms: Muscle swelling, Weak, Tender and Sore Muscle...<br> Causes:
-            High-intensity exercise, Severe Dehydration...</div>
-        <a id='hf-revision' href="/case_specific">Revision Here</a>
-    </div>
-
-
-
 
 @endsection
 

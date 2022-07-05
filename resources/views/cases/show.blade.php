@@ -47,7 +47,7 @@
     </div>
 
     <div>
-        <button id='btn-diagnose' onclick="location.href = '../diagnosis'" id="">Diagnose</button>
+        <button id='btn-diagnose' onclick="location.href = '../diagnosis'" id="">Diagnose Patient</button>
     </div>
 
     <div>

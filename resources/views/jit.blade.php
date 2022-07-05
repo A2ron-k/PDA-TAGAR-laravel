@@ -8,11 +8,11 @@
 @section('content')
     {{-- This area is for the content --}}
 
-    <div id=info-case_spec_header style="">RIB FRACTURE | 92%</div>
+    <div id=info-sympHeader style="">RIB FRACTURE | 92%</div>
 
-    <div id="caseSpec-container-case" style="top: 284px;">
-        <div id="predicted-header" style="top: 20px;">Symptoms</div>
-        <div id="predicted-symptoms" style="top: 64px;">
+    <div id="jit-container-case" style="top: 132px;">
+        <div id="jit-header">Symptoms</div>
+        <div id="jit-symptoms">
             <ul>
                 <li>Pain</li>
                 <li>Bruising</li>
@@ -23,9 +23,9 @@
         </div>
     </div>
 
-    <div id="caseSpec-container-case" style="top: 531px;">
-        <div id="predicted-header" style="top: 20px;">Causes</div>
-        <div id="predicted-symptoms" style="top: 64px;">
+    <div id="jit-container-case" style="top: 334px;">
+        <div id="jit-header">Causes</div>
+        <div id="jit-symptoms">
             <ul>
                 <li>Fall that causes your ankle to twist</li>
                 <li>Landing awkardly on your foot after jumping</li>
@@ -35,9 +35,9 @@
         </div>
     </div>
 
-    <div id="caseSpec-container-case" style="top: 778px;">
-        <div id="predicted-header" style="top: 20px;">Symptoms</div>
-        <div id="predicted-symptoms" style="top: 64px;">
+    <div id="jit-container-case" style="top: 536px;">
+        <div id="jit-header">Treatments</div>
+        <div id="jit-symptoms">
             <ul>
                 <li>Rest the injured limb</li>
                 <li>Ice the area</li>
