@@ -167,8 +167,8 @@ input[type="password"]::placeholder {
     font-family: "Work Sans";
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 23px;
+    line-height: 26.98px;
     letter-spacing: -0.02em;
 
     /* Accent 3 */
@@ -188,8 +188,8 @@ input[type="password"]::placeholder {
     font-family: "Work Sans";
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 16.25px;
+    line-height: 19.06px;
     letter-spacing: -0.02em;
 
     color: #000000;
@@ -251,8 +251,8 @@ input[type="password"]::placeholder {
     font-family: "Work Sans";
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 23px;
+    line-height: 26.98px;
     letter-spacing: -0.02em;
 
     color: #000000;
@@ -367,8 +367,8 @@ input[type="password"]::placeholder {
     font-family: "Work Sans";
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 16.25px;
+    line-height: 19.06px;
     letter-spacing: -0.02em;
 
     color: #000000;
@@ -465,8 +465,8 @@ input[type="password"]::placeholder {
     font-family: "Work Sans";
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 23px;
+    line-height: 26.98px;
     letter-spacing: -0.02em;
 
     /* Accent 3 */
@@ -486,8 +486,8 @@ input[type="password"]::placeholder {
     font-family: "Work Sans";
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 16.25px;
+    line-height: 19.06px;
     letter-spacing: -0.02em;
 
     color: #000000;
@@ -540,8 +540,8 @@ input[type="password"]::placeholder {
     font-family: "Work Sans";
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 23px;
+    line-height: 26.98px;
     letter-spacing: -0.02em;
 
     /* Accent 3 */
@@ -561,8 +561,8 @@ input[type="password"]::placeholder {
     font-family: "Work Sans";
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 16.25px;
+    line-height: 19.06px;
     letter-spacing: -0.02em;
 
     color: #000000;
@@ -633,8 +633,8 @@ input[type="password"]::placeholder {
     font-family: "Work Sans";
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 23px;
+    line-height: 26.98px;
     letter-spacing: -0.02em;
 }
 
@@ -651,7 +651,7 @@ body {
 	padding: 0;
 	/* background: #efefef; */
 	color: #333333;
-	font-family: "Roboto", sans-serif;
+	font-family: "Work Sans";
 	overflow-x: hidden;
 }
 
@@ -732,7 +732,7 @@ a:hover {
 	width: 300px;
 	margin: -100px 0 0 0;
 	padding: 50px;
-    padding-bottom: 100vw;
+    padding-bottom: 20vh;
 	padding-top: 125px;
 	right: -100px;
 	background: #ededed;
@@ -755,5 +755,5 @@ a:hover {
 }
 
 #spacer{
-    margin-bottom: 150px;
+    margin-bottom: 75px;
 }
