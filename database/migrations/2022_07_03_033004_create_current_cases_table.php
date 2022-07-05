@@ -34,6 +34,8 @@ class CreateCurrentCasesTable extends Migration
             $table->string('prediction_diagnosis_3');
             $table->string('prediction_diagnosis_percentage_3');
             $table->string('medical_history');
+            $table->date('date');
+            $table->time('time');
         });
     }
 
