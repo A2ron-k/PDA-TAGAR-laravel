@@ -7,7 +7,7 @@
 
 @section('content')
     {{-- This area is for the content --}}
-
+    <div></div>
     <div id="info-sympHeader">
         Case History
     </div>

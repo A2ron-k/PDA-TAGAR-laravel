@@ -30,32 +30,35 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><img src="https://www.scdf.gov.sg/Cwp/assets/images/SCDF_The_Life_Saving_Force_Logo_New.png"
-                            id='logo-png' alt=""></li>
-                    <li class="active"><a href="/cases/1">Current Case</a></li>
-                    <li><a href="{{ route('cases.index') }}">Case History</a></li>
-                    <li><a href="/sim">Simulation</a></li>
-                    <li><a href="/omni">OMNII</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <nav role='navigation'>
+		<div id="menuToggle">
+			<input type="checkbox" />
+			<span></span>
+			<span></span>
+			<span></span>
+			<ul id="menu">
+				<a href="/cases/1">
+					<li>Current Case</li>
+				</a>
+				<a href="{{ route('cases.index') }}">
+					<li>Case History</li>
+				</a>
+				<a href="/sim">
+					<li>Simulation</li>
+				</a>
+				<a href="/omni">
+					<li>OMNII</li>
+				</a>
 
+                <a href="/login">
+					<li style= "padding-top: 500px">Log out</li>
+				</a>
+			</ul>
+		</div>
+	</nav>
+
+    <div id='spacer'></div>
+    
     <main class="py-4">
         @yield('content')
     </main>
