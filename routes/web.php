@@ -24,8 +24,8 @@ Route::get('/login', function(){
     return view('login');
 });
 
-Route::get('/signup', function(){
-    return view('signup');
+Route::get('/register', function(){
+    return view('register');
 });
 
 Route::get('/diagnosis', function(){
@@ -43,6 +43,11 @@ Route::get('/geolocation', function(){
 Route::get('/sim', function(){
     return view('sim_case');
 });
+
+Route::get('/omni', function(){
+    return view('omni');
+});
+
 
 //  Auto Routing for all resource specific views
 Route::resource('cases', CasesController::class);
