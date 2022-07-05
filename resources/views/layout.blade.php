@@ -29,7 +29,8 @@
     </script>
 </head>
 
-<body>
+<body style="min-height: 1180px">
+    <div id="topbar"></div>
     <nav role='navigation'>
 		<div id="menuToggle">
 			<input type="checkbox" />
@@ -51,7 +52,7 @@
 				</a>
 
                 <a href="/login">
-					<li style= "padding-top: 500px">Log out</li>
+					<li style= "padding-top: 400px">Log out</li>
 				</a>
 			</ul>
 		</div>

@@ -42,6 +42,7 @@ $case_diagnosis = [
 
 @section('content')
     {{-- This area is for the content --}}
+    <div id= "info-sympHeader" >Possible Diagnosis</div>
     <div id="cases-index-container">
         @foreach ($case_diagnosis as $diagnosis)
             <div id="diagnosis-container-case">

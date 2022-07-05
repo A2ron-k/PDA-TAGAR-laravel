@@ -210,14 +210,6 @@ class CreateCurrentCasesTable extends Migration
 
             ]
 
-            // [
-            //     'name' => 'Category2',
-            // ],
-            // [
-            //     'name' => 'Category3',
-            // ],
-
-            
         );
         foreach ($data as $datum) {
             $category = new CurrentCase(); //The Category is the model for your migration
@@ -233,7 +225,6 @@ class CreateCurrentCasesTable extends Migration
             $category->tagging_result_1 = $datum['tagging_result_1'];
             $category->tagging_result_2 = $datum['tagging_result_2'];
             $category->tagging_result_3 = $datum['tagging_result_3'];
-
             $category->prediction_diagnosis_1 = $datum['prediction_diagnosis_1'];
             $category->prediction_diagnosis_percentage_1 = $datum['prediction_diagnosis_percentage_1'];
             $category->prediction_diagnosis_2 = $datum['prediction_diagnosis_2'];
