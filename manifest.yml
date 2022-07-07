@@ -1,0 +1,24 @@
+---
+applications:
+    - name: pda-laravel-tagar-demo
+      memory: 1GB
+      instances: 1
+      path: .
+      services: []
+      buildpacks: [https://github.com/cloudfoundry/php-buildpack.git#v4.4.63]
+      env:
+        APP_KEY: base64:MTRMYg4XDmJaT+mBaILqT3MHf4HC8sz4KN13AU7NX48=
+        # APP_URL: laravel-demo-8.apps.34.69.176.230.nip.io
+        APP_ENV: local
+        APP_DEBUG: true
+        CF_STAGING_TIMEOUT: 15
+        CF_STARTUP_TIMEOUT: 15
+
+        DB_CONNECTION: mysql
+        DB_HOST: edc3a984-eedd-4396-851b-823320a16114.mysql.service.internal
+        DB_PORT: 3306
+        DB_DATABASE: service_instance_db
+        DB_USERNAME: 87188e870a444fa7b278aa0622f327ce
+        DB_PASSWORD: qvf8x0ttgzvvhqzj
+        BP_DEBUG: "True"
+

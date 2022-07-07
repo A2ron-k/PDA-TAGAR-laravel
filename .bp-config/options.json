@@ -1,0 +1,8 @@
+{
+    "WEB_SERVER": "httpd",
+    "WEBDIR": "public",
+    "PHP_VERSION": "{PHP_74_LATEST}",
+    "COMPOSER_VENDOR_DIR": "vendor",
+    "PHP_EXTENSIONS": ["gd", "pdo", "pgsql", "pdo_pgsql","pdo_mysql"],
+    "PHP_MODULES":[""] 
+}

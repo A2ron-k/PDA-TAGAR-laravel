@@ -1,0 +1,6 @@
+php:
+# directory where web app code is stored
+# default: htdocs
+webserver: httpd # Web server to use, e.g php-server, httpd, nginx
+webdirectory: public
+version: 7.4.* #PHP Version to use, Default is 8.0 or as defined in composer.json
