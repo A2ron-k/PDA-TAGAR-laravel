@@ -1,5 +1,6 @@
 html {
     background-color: #f5f5f5;
+    overflow-x: hidden;
 }
 
 body {
@@ -139,7 +140,7 @@ input[type="password"]::placeholder {
 }
 
 #cases-index-container {
-    padding-top: 60px;
+    /* padding-top: 60px; */
 }
 
 #info-caseHis {
@@ -647,7 +648,6 @@ input[type="password"]::placeholder {
 body {
     margin: 0;
     padding: 0;
-    /* background: #efefef; */
     color: #333333;
     font-family: "Work Sans";
     overflow-x: hidden;
@@ -666,7 +666,7 @@ a:hover {
 #menuToggle {
     display: block;
     position: absolute;
-    top: 50px;
+    top: 30px;
     right: 50px;
     z-index: 1;
     -webkit-user-select: none;
@@ -757,9 +757,11 @@ a:hover {
 }
 
 #topbar {
-    position: absolute;
+    /* position: absolute; */
     width: 820px;
-    height: 50px;
+    height: 75px;
     left: 0px;
     top: 0px;
+    background-color: #446474 ;
 }
+
