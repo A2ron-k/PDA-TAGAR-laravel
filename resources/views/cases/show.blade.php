@@ -5,6 +5,15 @@
 
 {{-- ################################################# --}}
 
+@php
+    $photo_arr = [
+        "Mprofilepic", "Mprofilepic4", "Fprofilepic2", "Fprofilepic3"
+];
+
+    $chosen = $photo_arr[rand(0,count($photo_arr)-1)];
+
+@endphp
+
 
 
 @section('content')
@@ -13,7 +22,7 @@
     <div id='info-sympHeader'>{{ $case['case_id'] }}</div>
 
     <div id="patient-profile">
-        <img src="{{ url('img/vector-user.png') }}" height=179px width=179px left=86px top=136px id='img-patient'
+        <img src="{{ url('img/'."$chosen".'.jpeg') }}" height=179px width=179px left=86px top=136px id='img-patient'
             alt="">
         <span id='info-chiefComplain'>{{ $case['chief_complain'] }}</span>
         <div id="info-patientInfo">

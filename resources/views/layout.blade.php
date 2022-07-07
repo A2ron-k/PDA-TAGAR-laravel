@@ -31,7 +31,7 @@
 
 <body style="min-height: 1180px">
     <div id="topbar"></div>
-    <img src="https://cdn-icons.flaticon.com/png/512/6015/premium/6015685.png?token=exp=1657168056~hmac=133c194b013bee8ce906f4f86cd6ccd6"
+    <img src="{{url('img/menu.png')}}"
         id="openbtn" onclick="openNav()"></img>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
