@@ -35,22 +35,22 @@
         id="openbtn" onclick="openNav()"></img>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/cases/1">
-            <li>Current Case</li>
+        <a href="/login">
+            <li>Sign in</li>
         </a>
-        <a href="{{ route('cases.index') }}">
-            <li>Case History</li>
+        <a href="/register">
+            <li>Register</li>
         </a>
-        <a href="/sim">
-            <li>Simulation</li>
+        <a href="#">
+            <li></li>
         </a>
-        <a href="/omni">
-            <li>OMNII</li>
+        <a href="#">
+            <li></li>
         </a>
 
-        <a href="/login">
+        {{-- <a href="/login">
             <li style="padding-top: 400px">Log out</li>
-        </a>
+        </a> --}}
     </div>
 
     <div id='spacer'></div>

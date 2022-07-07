@@ -7,7 +7,7 @@ applications:
       services: []
       buildpacks: [https://github.com/cloudfoundry/php-buildpack.git#v4.4.63]
       env:
-        APP_KEY: base64:MTRMYg4XDmJaT+mBaILqT3MHf4HC8sz4KN13AU7NX48=
+        APP_KEY: base64:9fcmDVCdOe+6WUfGrd3Z94TacCalZtzpPKK+nTb4KQI=
         # APP_URL: laravel-demo-8.apps.34.69.176.230.nip.io
         APP_ENV: local
         APP_DEBUG: true
