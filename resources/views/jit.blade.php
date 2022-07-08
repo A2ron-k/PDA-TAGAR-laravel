@@ -8,7 +8,7 @@
 @section('content')
     {{-- This area is for the content --}}
 
-    <div id=info-sympHeader style="">RIB FRACTURE | 92%</div>
+    <div id=info-sympHeader style="">SPRAINED ANKLE | 92%</div>
 
     <div id="jit-container-case" style="top: 132px;">
         <div id="jit-header">Symptoms</div>
