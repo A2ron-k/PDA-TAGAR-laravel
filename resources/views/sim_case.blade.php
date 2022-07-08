@@ -6,8 +6,17 @@
 {{-- ################################################# --}}
 
 @php
-$case = ['case_id' => 'SIM MODE', 'chief_complain' => 'Motor Accident', 'name' => 'John Tan', 'age' => '65', 'allergies' => 'Nut, Wheat, Soy', 'tagging_result_1' => 'Internal Pain in Chest', 'tagging_result_2' => 'Blood from Head', 'tagging_result_3' => 'Blisters on Leg', 'medical_history' => 'Patient is Asthmathic, Diabetic and has High Blood Pressure.'];
+
+$photo_arr = ['Mprofilepic', 'Mprofilepic4', 'Fprofilepic2', 'Fprofilepic3'];
+$name_arr = ["John Tan", "Mary Jane", "Ashe", "Phi"];
+
+$chosen = $photo_arr[rand(0, count($photo_arr) - 1)];
+$chosen_name = $name_arr[rand(0, count($name_arr) - 1)];
+
+$case = ['case_id' => 'SIM MODE', 'chief_complain' => 'Motor Accident', 'name' => "$chosen_name", 'age' => '65', 'allergies' => 'Nut, Wheat, Soy', 'tagging_result_1' => 'Internal Pain in Chest', 'tagging_result_2' => 'Blood from Head', 'tagging_result_3' => 'Blisters on Leg', 'medical_history' => 'Patient is Asthmathic, Diabetic and has High Blood Pressure.'];
+
 @endphp
+
 
 
 @section('content')
@@ -16,28 +25,29 @@ $case = ['case_id' => 'SIM MODE', 'chief_complain' => 'Motor Accident', 'name' =
     <div id='info-sympHeader'>{{ $case['case_id'] }}</div>
 
     <div id="patient-profile">
-        <img src="{{ url('img/vector-user.png') }}" height=179px width=179px left=86px top=136px id='img-patient'
+        <img src="{{ url('img/' . "$chosen" . '.jpeg') }}" height=179px width=179px left=86px top=136px id='img-patient'
             alt="">
         <span id='info-chiefComplain'>{{ $case['chief_complain'] }}</span>
         <div id="info-patientInfo">
             {{ $case['name'] }} | {{ $case['age'] }}
             <br>
-            Allegy: {{ $case['allergies'] }}
+            Allergy: {{ $case['allergies'] }}
         </div>
     </div>
 
     <div>
         <div id="info-sympHeader" style="top:373px">Symptoms</div>
-        <div id="result-ML" style="left: 66px;">
-            <div id="info-symp">{{ $case['tagging_result_1'] }}</div>
+        <div id="symptoms-container">
+            <div id="result-ML" style="left: 0px;">
+                <div id="info-symp">{{ $case['tagging_result_1'] }}</div>
+            </div>
+            <span id="result-ML" style="left: 245px;">
+                <div id="info-symp">{{ $case['tagging_result_2'] }}</div>
+            </span>
+            <span id="result-ML" style="left: 489px;">
+                <div id="info-symp">{{ $case['tagging_result_3'] }}</div>
+            </span>
         </div>
-
-        <span id="result-ML" style="left: 311px;">
-            <div id="info-symp">{{ $case['tagging_result_2'] }}</div>
-        </span>
-        <span id="result-ML" style="left: 555px;">
-            <div id="info-symp">{{ $case['tagging_result_3'] }}</div>
-        </span>
     </div>
 
     <div id="med-history-container">
@@ -49,12 +59,14 @@ $case = ['case_id' => 'SIM MODE', 'chief_complain' => 'Motor Accident', 'name' =
         </div>
     </div>
 
-    <div>
-        <button id='btn-diagnose' onclick="location.href = '../diagnosis'" id="">Diagnose Patient</button>
-    </div>
+    <div id="btn-container">
+        <div>
+            <button id='btn-diagnose' onclick="location.href = '/diagnosis'" id="">Diagnose Patient</button>
+        </div>
 
-    <div>
-        <button id='btn-locate' onclick="location.href = '/geolocation'" id="">Locate Patient</button>
+        <div>
+            <button id='btn-locate' onclick="location.href = '/geolocation'" id="">Locate Patient</button>
+        </div>
     </div>
 
 @endsection

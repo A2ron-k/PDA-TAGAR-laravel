@@ -12,8 +12,8 @@
     <body>
         <div id="form-container">
             <div id="header-login">Sign up to PDA</div>
-            <input type="text" id="input-username-login" placeholder="Username">
-            <input type="password" id="input-password-login" placeholder="Password">
+            <input type="text" id="input-username-login" placeholder="Username" required>
+            <input type="password" id="input-password-login" placeholder="Password" required>
 
             <button onclick="register()" id="submit-login">Sign In</button>
         </div>

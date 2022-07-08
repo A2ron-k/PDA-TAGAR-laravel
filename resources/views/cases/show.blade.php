@@ -6,11 +6,9 @@
 {{-- ################################################# --}}
 
 @php
-    $photo_arr = [
-        "Mprofilepic", "Mprofilepic4", "Fprofilepic2", "Fprofilepic3"
-];
+$photo_arr = ['Mprofilepic', 'Mprofilepic4', 'Fprofilepic2', 'Fprofilepic3'];
 
-    $chosen = $photo_arr[rand(0,count($photo_arr)-1)];
+$chosen = $photo_arr[rand(0, count($photo_arr) - 1)];
 
 @endphp
 
@@ -22,7 +20,7 @@
     <div id='info-sympHeader'>{{ $case['case_id'] }}</div>
 
     <div id="patient-profile">
-        <img src="{{ url('img/'."$chosen".'.jpeg') }}" height=179px width=179px left=86px top=136px id='img-patient'
+        <img src="{{ url('img/' . "$chosen" . '.jpeg') }}" height=179px width=179px left=86px top=136px id='img-patient'
             alt="">
         <span id='info-chiefComplain'>{{ $case['chief_complain'] }}</span>
         <div id="info-patientInfo">
@@ -34,16 +32,17 @@
 
     <div>
         <div id="info-sympHeader" style="top:373px">Symptoms</div>
-        <div id="result-ML" style="left: 66px;">
-            <div id="info-symp">{{ $case['tagging_result_1'] }}</div>
+        <div id="symptoms-container">
+            <div id="result-ML" style="left: 0px;">
+                <div id="info-symp">{{ $case['tagging_result_1'] }}</div>
+            </div>
+            <span id="result-ML" style="left: 245px;">
+                <div id="info-symp">{{ $case['tagging_result_2'] }}</div>
+            </span>
+            <span id="result-ML" style="left: 489px;">
+                <div id="info-symp">{{ $case['tagging_result_3'] }}</div>
+            </span>
         </div>
-
-        <span id="result-ML" style="left: 311px;">
-            <div id="info-symp">{{ $case['tagging_result_2'] }}</div>
-        </span>
-        <span id="result-ML" style="left: 555px;">
-            <div id="info-symp">{{ $case['tagging_result_3'] }}</div>
-        </span>
     </div>
 
     <div id="med-history-container">
@@ -55,12 +54,14 @@
         </div>
     </div>
 
-    <div>
-        <button id='btn-diagnose' onclick="location.href = '../diagnosis'" id="">Diagnose Patient</button>
-    </div>
+    <div id ="btn-container">
+        <div>
+            <button id='btn-diagnose' onclick="location.href = '../diagnosis'" id="">Diagnose Patient</button>
+        </div>
 
-    <div>
-        <button id='btn-locate' onclick="location.href = '/geolocation'" id="">Locate Patient</button>
+        <div>
+            <button id='btn-locate' onclick="location.href = '/geolocation'" id="">Locate Patient</button>
+        </div>
     </div>
 
 @endsection
