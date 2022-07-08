@@ -794,4 +794,17 @@ a:hover {
     #jit-container-case{
         left: 32%
     }
+
+    #geolocation-overview{
+        left:32%
+    }
+    
+    #geolocation-zoomed{
+        left: 32%;
+    }
+
+    #geolocation-floorplan{
+        left: 32%;
+    }
+
 }
