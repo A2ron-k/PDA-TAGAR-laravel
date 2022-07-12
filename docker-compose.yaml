@@ -10,8 +10,8 @@ services:
     volumes:
       - .:/usr/src/app
       - ./public:/usr/src/app/public
-    # depends_on:
-    #   - pda_db
+    depends_on:
+      - pda_db
     networks:
       - app_network
 
@@ -42,20 +42,20 @@ services:
     ports:
       - 3306:3306
     environment:
-      MYSQL_DATABASE: scdf_test
+      MYSQL_DATABASE: testdb
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: root
       MYSQL_PASSWORD: root
     networks:
       - app_network
 
-  # pda_redis:
-  #   container_name: pda-redis
-  #   image: redis:latest
-  #   ports:
-  #     - 6379:6379
-  #   networks:
-  #     - app_network
+  pda_redis:
+    container_name: pda-redis
+    image: redis:latest
+    ports:
+      - 6379:6379
+    networks:
+      - app_network
 
 networks:
   app_network:
